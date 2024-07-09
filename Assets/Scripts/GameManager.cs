@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get; private set;}
     public int HealthPoints {get {return healthPoints;}}
     public int BadPoints {get {return badPoints;}}
-    private int healthPoints, badPoints;
+    public int healthPoints, badPoints;
     public int totalPoints = 0;
     
     public List<GameObject> food; 

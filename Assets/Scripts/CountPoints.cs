@@ -25,6 +25,7 @@ public class CountPoints : MonoBehaviour
             Destroy(food.gameObject);
         }
         else if(food.gameObject.CompareTag("BadFood")){
+            
             GameManager.Instance.PlusBadPoints(valor);
             Destroy(food.gameObject);
         }

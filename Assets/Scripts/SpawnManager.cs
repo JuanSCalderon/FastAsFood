@@ -4,30 +4,35 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject[] foodPrefabs;
-    public GameObject[] spawnPoints;
-
-    private float startDelay = 1;
-    private float spawnInterval = 1f;
-    public bool canSpawn = true;
+    //Variables del spawn
+    private float spawnRange = 10.0f;
+    public float timeInGame = 5.0f;
     
     void Start() {
-        InvokeRepeating("SpawnRandomFood", startDelay, spawnInterval);
+        //Ubica un alimento en un espacio de la escena.
+        transform.position = GenerateSpawnPosition();
+        //Destruye el objeto sino es tomado.
+        StartCoroutine(FoodCountDown());
+    }
+    
+    void Update()
+    {   
+        //Efecto de girar la cómida.
+        transform.Rotate(new Vector3(0f, 30f, 0f)*Time.deltaTime);
     }
 
-    void SpawnRandomFood()
-    {
-        if (!canSpawn || spawnPoints.Length == 0) return;
+    //Posición donde aparecen al azar los alimentos
+    private Vector3 GenerateSpawnPosition(){
 
-        int spawnIndex = Random.Range(0, spawnPoints.Length);
-        GameObject selectedSpawnPoint = spawnPoints[spawnIndex];
-
-        int foodIndex = Random.Range(0, foodPrefabs.Length);
-        Instantiate(foodPrefabs[foodIndex], selectedSpawnPoint.transform.position, selectedSpawnPoint.transform.rotation);
+        float spawnPosX = Random.Range(-spawnRange, spawnRange);
+        float spawnPosZ = Random.Range(-spawnRange, spawnRange);
+        Vector3 randomPos = new Vector3(spawnPosX,1,spawnPosZ);
+        return randomPos; 
     }
 
-    public void StopSpawning()
-    {
-        canSpawn = false;
+    //Tiempo en el que esta en el juego la cómida sino se toma
+    private IEnumerator FoodCountDown(){
+        yield return new WaitForSeconds(timeInGame);
+        Destroy(gameObject);
     }
 }

@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public GameObject[] foodPrefabs;
+    public GameObject[] spawnPoints;
+
+    private float startDelay = 1;
+    private float spawnInterval = 1f;
+    public bool canSpawn = true;
+    
+    void Start() {
+        InvokeRepeating("SpawnRandomFood", startDelay, spawnInterval);
     }
 
-    // Update is called once per frame
-    void Update()
+    void SpawnRandomFood()
     {
-        
+        if (!canSpawn || spawnPoints.Length == 0) return;
+
+        int spawnIndex = Random.Range(0, spawnPoints.Length);
+        GameObject selectedSpawnPoint = spawnPoints[spawnIndex];
+
+        int foodIndex = Random.Range(0, foodPrefabs.Length);
+        Instantiate(foodPrefabs[foodIndex], selectedSpawnPoint.transform.position, selectedSpawnPoint.transform.rotation);
+    }
+
+    public void StopSpawning()
+    {
+        canSpawn = false;
     }
 }

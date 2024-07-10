@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229938078282534519}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00091961486, y: 0.163419, z: -0.0008562229}
+  m_LocalPosition: {x: 0, y: 0.1421, z: 0}
   m_LocalScale: {x: 1.18, y: 1.5222, z: 1.18}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -95,9 +95,10 @@ GameObject:
   - component: {fileID: 1082480907955563993}
   - component: {fileID: 2945716923746588947}
   - component: {fileID: 5321888713260449757}
+  - component: {fileID: 8216208985315058143}
   m_Layer: 0
   m_Name: Fries
-  m_TagString: Untagged
+  m_TagString: BadFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,15 +110,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3738468861648451782}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -18.9355, y: 4.6314545, z: -122.2345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 791899343860632742}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1082480907955563993
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -176,9 +177,26 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3738468861648451782}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1955199885099047007, guid: 3a8c06db37a92934291f02f06005c637, type: 3}
+--- !u!114 &8216208985315058143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3738468861648451782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd0bd6966b18b469aa372a9f90ffcd84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRangeXMax: -1.5
+  spawnRangeXMin: -30
+  spawnRangeZMax: -9
+  spawnRangeZMin: 8.5
+  timeInGame: 5

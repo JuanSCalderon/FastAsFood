@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3670585751300741701}
   - component: {fileID: 1518976425732140687}
   - component: {fileID: 404354483772379537}
+  - component: {fileID: 5727533111297368104}
   m_Layer: 0
   m_Name: Banana
-  m_TagString: Untagged
+  m_TagString: HealthFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014578146237435738}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -18.892, y: 4.6314545, z: -121.31}
-  m_LocalScale: {x: 3, y: 3, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3670585751300741701
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -92,9 +93,22 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014578146237435738}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8457624670379154836, guid: b2a179353db742348aaf76608e02dee0, type: 3}
+--- !u!114 &5727533111297368104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014578146237435738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd0bd6966b18b469aa372a9f90ffcd84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeInGame: 5

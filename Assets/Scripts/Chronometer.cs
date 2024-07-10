@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEditor.UIElements;
+using UnityEngine.SceneManagement;
 
 public class Chronometer : MonoBehaviour
 {
     //Declaración de Variables
     [SerializeField] TextMeshProUGUI textCrono;
-    private float tiempo = 60; 
+    //Tiempo que durara la partida
+    [SerializeField] private float tiempo = 90; 
     //[SerializeField] private GameObject finishTime, backGround;
     public PlayerController playerController;
     bool stopGame;
@@ -46,7 +48,10 @@ public class Chronometer : MonoBehaviour
             //finishTime.SetActive(true);
             //backGround.SetActive(true);
             playerController.enabled = false;
-            //Agregar el salto a escena de fin de jeugo
+            //Agregar el salto a escena de fin de juego
+            {
+                SceneManager.LoadScene("GameOver");
+            }
         }
     }
 }

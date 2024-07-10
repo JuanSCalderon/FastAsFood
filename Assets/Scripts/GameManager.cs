@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public float BadPoints {get {return badPoints=0;}}
     public float healthPoints = 0, badPoints = 0, gamePoints;
     public float weightPoints = 50;
+    public float normalizedWeight; 
     
     public List<GameObject> food; 
     private float spawnTime = 2.0f, hungerTime = 3.0f;
@@ -51,6 +52,8 @@ public class GameManager : MonoBehaviour
         {
             timepPoints = 3.0f; 
         }
+
+        normalizedWeight = NormalizedWeight(weightPoints);
 
         //Condición para terminar el juego por peso
         /*if(weightPoints <= 0)
@@ -98,5 +101,12 @@ public class GameManager : MonoBehaviour
         badPoints += badPointsPlus*8;
         weightPoints = weightPoints - badPoints;
         badPoints = 0;
+    }
+
+    //Nomaiza los datos dando un valor entre 0 y 1
+    public float NormalizedWeight(float weighToNormalized){
+        
+        float normalWeight = weighToNormalized/100;
+        return normalWeight; 
     }
 }

@@ -46,6 +46,7 @@ public class Chronometer : MonoBehaviour
             //finishTime.SetActive(true);
             //backGround.SetActive(true);
             playerController.enabled = false;
+            //Agregar el salto a escena de fin de jeugo
         }
     }
 }

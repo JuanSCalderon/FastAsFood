@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEditor.UIElements;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +13,7 @@ public class GameManager : MonoBehaviour
     public float healthPoints = 0, badPoints = 0, gamePoints;
     public float weightPoints = 50;
     public float normalizedWeight; 
+    [SerializeField] TextMeshProUGUI textPoints;
     
     public List<GameObject> food; 
     private float spawnTime = 2.0f, hungerTime = 3.0f;
@@ -32,14 +36,14 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawnFood());
         //Mide el nivel de hambre
         StartCoroutine(Hunger());
-        
-        
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Muestra el puntaje que lleva el jugador
+        textPoints.text = gamePoints.ToString(); 
+
         //Va otorgandole puntos al jugador por estar en un punto medio entre el hambre y la llenura.
         timepPoints -= Time.deltaTime;
 
@@ -48,6 +52,7 @@ public class GameManager : MonoBehaviour
             gamePoints = gamePoints + 10;
         }
 
+        //Reinicia el timer
         if(timepPoints <= 0)
         {
             timepPoints = 3.0f; 
@@ -56,14 +61,16 @@ public class GameManager : MonoBehaviour
         normalizedWeight = NormalizedWeight(weightPoints);
 
         //Condición para terminar el juego por peso
-        /*if(weightPoints <= 0)
+        if(weightPoints <= 0)
         {
             //Se acaba el juego por bajo peso
+            SceneManager.LoadScene("GameOver");
         }
         else if(weightPoints >= 100)
         {
             //Se acaba el juego por mucho peso
-        }*/
+            SceneManager.LoadScene("GameOver");
+        }
         
     }
 

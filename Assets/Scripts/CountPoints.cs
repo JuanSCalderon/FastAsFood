@@ -10,29 +10,33 @@ public class CountPoints : MonoBehaviour
     public ParticleSystem healthFoodParticle;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     //Conteo de puntos.
-    private void OnTriggerEnter(Collider food) {
+    private void OnTriggerEnter(Collider food)
+    {
 
-        if(food.gameObject.CompareTag("HealthFood"))
+        if (food.gameObject.CompareTag("HealthFood"))
         {
             GameManager.Instance.PlusHealthPoints(valor);
             healthFoodParticle.Play();
+            AudioManager.Instance.PlaySFX("Crunch");
             Destroy(food.gameObject);
         }
-        else if(food.gameObject.CompareTag("BadFood")){
+        else if (food.gameObject.CompareTag("BadFood"))
+        {
 
             GameManager.Instance.PlusBadPoints(valor);
             badFoodParticle.Play();
+            AudioManager.Instance.PlaySFX("Burp");
             Destroy(food.gameObject);
         }
-        
+
     }
 }

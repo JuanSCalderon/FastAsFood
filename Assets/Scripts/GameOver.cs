@@ -8,6 +8,7 @@ public class GameOver : MonoBehaviour
     // Nombre de la música del menú principal y la música del juego
     public string gameOverMusic = "GameOver";
     public string gameMusic = "GameMusic";
+    public string sFxReStart = "ReStartButton";
 
     private void Start()
     {
@@ -17,8 +18,15 @@ public class GameOver : MonoBehaviour
 
     public void PlayGame()
     {
-
-        AudioManager.Instance.PlayMusic(gameMusic);
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayMusic(gameMusic);
+            AudioManager.Instance.PlaySFX(sFxReStart, 0.5f, 0.8f); // Volumen a 0.5 y pitch a 1.2
+        }
+        else
+        {
+            Debug.LogError("AudioManager.Instance is null in GameOver.PlayGame()");
+        }
 
         SceneManager.LoadScene("Test");
     }

@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     private Animator Animator;
     private Rigidbody playerRigibody;
     float movX, movZ;
-    public float degrees, speed;
+    public float degrees; 
+    public float speed = 10, speedWeight;
     Vector3 move; 
     // Start is called before the first frame update
     void Start()
@@ -30,13 +31,34 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        
+        if(GameManager.Instance.weightPoints >= 0 && GameManager.Instance.weightPoints < 25)
+        {
+            speedWeight = 2.0f;
+        }
+        if(GameManager.Instance.weightPoints >= 25 && GameManager.Instance.weightPoints < 40)
+        {
+            speedWeight = 1.5f;
+        }
+        if(GameManager.Instance.weightPoints >= 40 && GameManager.Instance.weightPoints < 60)
+        {
+            speedWeight = 1f;
+        }
+        if(GameManager.Instance.weightPoints >= 60 && GameManager.Instance.weightPoints < 75)
+        {
+            speedWeight = 0.5f;
+        }
+        if(GameManager.Instance.weightPoints >= 75 && GameManager.Instance.weightPoints < 100)
+        {
+            speedWeight = 0.3f;
+        }
+
         if(movX != 0 || movZ != 0)
         {
         //Traslación del personaje en el campo de juego
-        playerRigibody.MovePosition(transform.position + move * Time.deltaTime * speed);
+        playerRigibody.MovePosition(transform.position + move * Time.deltaTime * (speed * speedWeight));
         //Rotación del personaje
         transform.Rotate(0, movX * degrees, 0); 
         }
     }
+
 }

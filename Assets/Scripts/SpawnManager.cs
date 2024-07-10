@@ -7,12 +7,15 @@ public class SpawnManager : MonoBehaviour
     private float spawnRangeXMin;
     private float spawnRangeZMax;
     private float spawnRangeZMin;
-    public float timeInGame = 5.0f;
+    public float timeInGame = 7.0f;
 
     void Start() {
         CalculateSpawnRanges();
         // Ubica un alimento en un espacio de la escena.
+        CalculateSpawnRanges();
+        // Ubica un alimento en un espacio de la escena.
         transform.position = GenerateSpawnPosition();
+        // Destruye el objeto sino es tomado.
         // Destruye el objeto sino es tomado.
         StartCoroutine(FoodCountDown());
     }
@@ -28,14 +31,15 @@ public class SpawnManager : MonoBehaviour
         spawnRangeZMax = center.z + size.z / 2;
     }
 
-    private Vector3 GenerateSpawnPosition() {
+    private Vector3 GenerateSpawnPosition() 
+    {
         float spawnPosX = Random.Range(spawnRangeXMin, spawnRangeXMax);
         float spawnPosZ = Random.Range(spawnRangeZMin, spawnRangeZMax);
         Vector3 randomPos = new Vector3(spawnPosX, 5.5f, spawnPosZ);
         return randomPos;
     }
-
-    private IEnumerator FoodCountDown() {
+    private IEnumerator FoodCountDown()
+    {
         yield return new WaitForSeconds(timeInGame);
         Destroy(gameObject);
     }

@@ -221,8 +221,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474437303423146399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.197998, y: 4.6314535, z: -115.326775}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1359686196061271588}
@@ -666,6 +666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 292361409461812089}
   - component: {fileID: 6562380240336139302}
+  - component: {fileID: 4609960324869544578}
   m_Layer: 0
   m_Name: Barbarian_LegLeft
   m_TagString: Untagged
@@ -782,6 +783,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0022609965, y: 0.001778651, z: -0.0005433294}
     m_Extent: {x: 0.0023431387, y: 0.0036265217, z: 0.0029815221}
   m_DirtyAABB: 0
+--- !u!64 &4609960324869544578
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602963417498101395}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6030514293163380519, guid: 1b94bddac569b7c4a8d6b3586ddc46e5, type: 3}
 --- !u!1 &3064282414074914814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,6 +1028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8402165477298014814}
   - component: {fileID: 3524322875519134219}
+  - component: {fileID: 8436461338718258882}
   m_Layer: 0
   m_Name: Barbarian_Head
   m_TagString: Untagged
@@ -1129,6 +1145,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.000007894356, y: 0.016468104, z: 0.00033080252}
     m_Extent: {x: 0.005541644, y: 0.005259067, z: 0.005057834}
   m_DirtyAABB: 0
+--- !u!64 &8436461338718258882
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3961713573216403646}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7512971173401551960, guid: 1b94bddac569b7c4a8d6b3586ddc46e5, type: 3}
 --- !u!1 &3970074639661211730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,6 +1833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8588819621657756405}
   - component: {fileID: 877605681676769738}
+  - component: {fileID: 7184102683477841501}
   m_Layer: 0
   m_Name: Barbarian_Body
   m_TagString: Untagged
@@ -1919,6 +1950,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0000053623226, y: 0.008452319, z: 0.000061949715}
     m_Extent: {x: 0.004394697, y: 0.004824234, z: 0.003930037}
   m_DirtyAABB: 0
+--- !u!64 &7184102683477841501
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081726229454733726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -336357542869944507, guid: 1b94bddac569b7c4a8d6b3586ddc46e5, type: 3}
 --- !u!1 &6321852689215603804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,6 +1974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3801550566616211194}
   - component: {fileID: 8599367335784970905}
+  - component: {fileID: 7081858550468263315}
   m_Layer: 0
   m_Name: Barbarian_LegRight
   m_TagString: Untagged
@@ -2045,6 +2091,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0020017994, y: 0.0017621676, z: 0.00036249892}
     m_Extent: {x: 0.0017446103, y: 0.0036097742, z: 0.0030190733}
   m_DirtyAABB: 0
+--- !u!64 &7081858550468263315
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6321852689215603804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1052691743730375449, guid: 1b94bddac569b7c4a8d6b3586ddc46e5, type: 3}
 --- !u!1 &6342656485284968194
 GameObject:
   m_ObjectHideFlags: 0

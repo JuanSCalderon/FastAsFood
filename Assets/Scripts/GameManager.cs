@@ -64,12 +64,12 @@ public class GameManager : MonoBehaviour
         if(weightPoints <= 0)
         {
             //Se acaba el juego por bajo peso
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOverMenu");
         }
         else if(weightPoints >= 100)
         {
             //Se acaba el juego por mucho peso
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOverMenu");
         }
         
     }

@@ -50,7 +50,7 @@ public class Chronometer : MonoBehaviour
             playerController.enabled = false;
             //Agregar el salto a escena de fin de juego
             {
-                SceneManager.LoadScene("GameOver");
+                SceneManager.LoadScene("GameOverMenu");
             }
         }
     }

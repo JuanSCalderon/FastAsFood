@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
     // Nombre de la música del menú principal y la música del juego
     public string mainMenuMusic = "MainMenuMusic";
     public string gameMusic = "GameMusic";
+    public string sFxStart = "StartButton";
+
 
 
     private void Start()
@@ -19,6 +21,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         // Cambiar la música cuando se inicie el juego
+        AudioManager.Instance.PlaySFX(sFxStart);
         AudioManager.Instance.PlayMusic(gameMusic);
         SceneManager.LoadScene("Test");
     }

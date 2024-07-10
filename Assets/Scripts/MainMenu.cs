@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
     {
         // Cambiar la música cuando se inicie el juego
         AudioManager.Instance.PlayMusic(gameMusic);
-        SceneManager.LoadScene("Test");
+        SceneManager.LoadSceneAsync("Test");
     }
 
     public void QuitGame()

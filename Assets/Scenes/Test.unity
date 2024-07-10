@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.59861165, g: 0.63806814, b: 0.7169812, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -157,6 +157,7 @@ MonoBehaviour:
   textCrono: {fileID: 1996330710}
   tiempo: 90
   playerController: {fileID: 1796602665}
+  animatorController: {fileID: 0}
 --- !u!114 &19068380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,14 +393,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328704745}
-  m_LocalRotation: {x: 0.0016530968, y: -0.9055949, z: 0.42412594, w: 0.003529906}
-  m_LocalPosition: {x: 0.32091868, y: 15.84617, z: 13.668884}
+  m_LocalRotation: {x: 0, y: -0.9063079, z: 0.42261827, w: 0}
+  m_LocalPosition: {x: 0.19415122, y: 19.97935, z: 16.551508}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -180, z: 0}
 --- !u!1 &518181457
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +435,7 @@ MonoBehaviour:
   gamePoints: 0
   weightPoints: 50
   normalizedWeight: 0
+  playerController: {fileID: 1796602665}
   textPoints: {fileID: 528484609}
   food:
   - {fileID: 2211364450042692625, guid: cf3a02e0717bb38449bb20673bcdc9e4, type: 3}
@@ -981,6 +983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1474437303423146399, guid: 3d36ddc3446119b4c9d8541f6e7f46fd, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2251114023249462053, guid: 3d36ddc3446119b4c9d8541f6e7f46fd, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1241,6 +1247,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 751954678110298601, guid: a9664ba9c65952e418135bef806b9167, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -142.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6410814138836442329, guid: a9664ba9c65952e418135bef806b9167, type: 3}
       propertyPath: m_RootOrder
       value: 2

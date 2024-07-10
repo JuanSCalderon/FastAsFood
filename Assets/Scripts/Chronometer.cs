@@ -10,15 +10,17 @@ public class Chronometer : MonoBehaviour
     //Declaración de Variables
     [SerializeField] TextMeshProUGUI textCrono;
     //Tiempo que durara la partida
-    [SerializeField] private float tiempo = 90; 
+    [SerializeField] private float tiempo = 90;
+    
     //[SerializeField] private GameObject finishTime, backGround;
     public PlayerController playerController;
+    public Animator animatorController;
     bool stopGame;
     private int minutes, seconds;
     // Start is called before the first frame update
     void Start()
     {
-        
+        animatorController = playerController.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -50,8 +52,16 @@ public class Chronometer : MonoBehaviour
             playerController.enabled = false;
             //Agregar el salto a escena de fin de juego
             {
-                SceneManager.LoadScene("GameOverMenu");
+                animatorController.SetBool("still", true);
+                StartCoroutine(WaitAndLoadScene("GameOverMenu", 6f));
             }
         }
+
+        // Corutina que espera un tiempo antes de cargar la escena
+    IEnumerator WaitAndLoadScene(string sceneName, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("GameOverMenu");
+    }
     }
 }

@@ -53,11 +53,11 @@ public class GameManager : MonoBehaviour
         }
 
         //Condición para terminar el juego por peso
-        /*if(weightPoints == 0)
+        /*if(weightPoints <= 0)
         {
             //Se acaba el juego por bajo peso
         }
-        else if(weightPoints == 100)
+        else if(weightPoints >= 100)
         {
             //Se acaba el juego por mucho peso
         }*/

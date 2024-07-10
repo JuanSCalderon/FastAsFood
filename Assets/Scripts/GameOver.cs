@@ -3,28 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
     // Nombre de la música del menú principal y la música del juego
-    public string mainMenuMusic = "MainMenuMusic";
+    public string gameOverMusic = "GameOver";
     public string gameMusic = "GameMusic";
-
 
     private void Start()
     {
         // Reproducir la música del menú principal al inicio
-        AudioManager.Instance.PlayMusic(mainMenuMusic);
+        AudioManager.Instance.PlayMusic(gameOverMusic);
     }
 
     public void PlayGame()
     {
-        // Cambiar la música cuando se inicie el juego
-        AudioManager.Instance.PlayMusic(gameMusic);
-        SceneManager.LoadScene("Test");
-    }
 
-    public void QuitGame()
-    {
-        Application.Quit();
+        AudioManager.Instance.PlayMusic(gameMusic);
+
+        SceneManager.LoadScene("Test");
     }
 }

@@ -7,12 +7,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get; private set;}
     public float HealthPoints {get {return healthPoints=0;}}
     public float BadPoints {get {return badPoints=0;}}
-    public float healthPoints = 0, badPoints = 0;
+    public float healthPoints = 0, badPoints = 0, gamePoints;
     public float weightPoints = 50;
     
     public List<GameObject> food; 
     private float spawnTime = 2.0f, hungerTime = 3.0f;
-    
+    public float timepPoints = 3.0f; 
     void Awake() {
         if(Instance == null){
             Instance = this;
@@ -33,11 +33,25 @@ public class GameManager : MonoBehaviour
         StartCoroutine(Hunger());
         
         
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Va otorgandole puntos al jugador por estar en un punto medio entre el hambre y la llenura.
+        timepPoints -= Time.deltaTime;
+
+        if(weightPoints >= 45 && weightPoints <= 55 && timepPoints <= 0)
+        {
+            gamePoints = gamePoints + 10;
+        }
+
+        if(timepPoints <= 0)
+        {
+            timepPoints = 3.0f; 
+        }
+
         //Condición para terminar el juego por peso
         /*if(weightPoints == 0)
         {
@@ -47,6 +61,7 @@ public class GameManager : MonoBehaviour
         {
             //Se acaba el juego por mucho peso
         }*/
+        
     }
 
     //Alimento que debe aparecer en la escena
@@ -60,19 +75,19 @@ public class GameManager : MonoBehaviour
     }
 
     //Corutina para el hambre
-    private IEnumerator Hunger(){
-
+    private IEnumerator Hunger()
+    {
         while(true){
         yield return new WaitForSeconds(hungerTime);
         weightPoints = weightPoints - 1;
-        }
+    }
 
     }
 
     //Calcula la cantidad de alimentación sana
     public void PlusHealthPoints(float healthPointsPlus)
     {
-        healthPoints += healthPointsPlus*2;
+        healthPoints += healthPointsPlus*5;
         weightPoints = weightPoints + healthPoints;
         healthPoints = 0;
     }
@@ -80,7 +95,7 @@ public class GameManager : MonoBehaviour
     //Calcula la cantidad de alimentación chatarra
     public void PlusBadPoints(float badPointsPlus)
     {
-        badPoints += badPointsPlus*4;
+        badPoints += badPointsPlus*8;
         weightPoints = weightPoints - badPoints;
         badPoints = 0;
     }

@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
     public void PlusHealthPoints(float healthPointsPlus)
     {
         healthPoints += healthPointsPlus * 5;
-        weightPoints = weightPoints + healthPoints;
+        weightPoints = weightPoints - healthPoints;
         healthPoints = 0;
     }
 
@@ -136,11 +136,11 @@ public class GameManager : MonoBehaviour
     public void PlusBadPoints(float badPointsPlus)
     {
         badPoints += badPointsPlus * 8;
-        weightPoints = weightPoints - badPoints;
+        weightPoints = weightPoints + badPoints;
         badPoints = 0;
     }
 
-    //Nomaiza los datos dando un valor entre 0 y 1
+    //Nomaliza los datos dando un valor entre 0 y 1
     public float NormalizedWeight(float weighToNormalized)
     {
 

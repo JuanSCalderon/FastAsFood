@@ -759,19 +759,33 @@ MonoBehaviour:
   musicSounds:
   - name: GameMusic
     clip: {fileID: 8300000, guid: cee513e9f94b2416c84136d80d435c78, type: 3}
+    volume: 1
+    pitch: 1
   - name: GameOver
     clip: {fileID: 8300000, guid: 3e408a92efbfc4f609fcc4a6881e1fda, type: 3}
+    volume: 1
+    pitch: 1
   - name: MainMenuMusic
     clip: {fileID: 8300000, guid: 41fb1e2d81e8c4a598c0f5fbfa615b76, type: 3}
+    volume: 1
+    pitch: 1
   sFxSounds:
   - name: Burp
     clip: {fileID: 8300000, guid: 20b482ce86cdb4e23bc27c7d58487b55, type: 3}
+    volume: 1
+    pitch: 1
   - name: Crunch
     clip: {fileID: 8300000, guid: 49399d66ff4f646059b99972f22afc72, type: 3}
+    volume: 1
+    pitch: 1
   - name: StartButton
     clip: {fileID: 8300000, guid: cb12c83f75e5d423db99c90806153e37, type: 3}
+    volume: 1
+    pitch: 1
   - name: ReStartButton
     clip: {fileID: 8300000, guid: c29dd12d424d84f1580bc7759f9af2df, type: 3}
+    volume: 1
+    pitch: 1
   musicSource: {fileID: 1753530054}
   sfxSource: {fileID: 1172900418}
 --- !u!4 &1234016844
@@ -843,7 +857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6437584, g: 0.9622642, b: 0.6036846, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

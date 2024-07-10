@@ -195,8 +195,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0bd6966b18b469aa372a9f90ffcd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRangeXMax: -1.5
-  spawnRangeXMin: -30
-  spawnRangeZMax: -9
-  spawnRangeZMin: 8.5
   timeInGame: 5

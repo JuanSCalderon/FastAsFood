@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
         //Traslación del personaje en el campo de juego
         playerRigibody.MovePosition(transform.position + move * Time.deltaTime * (speed * speedWeight));
         //Rotación del personaje
-        transform.Rotate(0, movX * degrees, 0); 
+        transform.Rotate(0, movX * degrees, 0);
         }
     }
 

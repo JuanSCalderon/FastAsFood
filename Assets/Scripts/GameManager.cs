@@ -8,10 +8,10 @@ public class GameManager : MonoBehaviour
     public float HealthPoints {get {return healthPoints=0;}}
     public float BadPoints {get {return badPoints=0;}}
     public float healthPoints = 0, badPoints = 0;
-    public float totalPoints = 0;
+    public float weightPoints = 50;
     
     public List<GameObject> food; 
-    private float spawnTime = 2.0f;
+    private float spawnTime = 2.0f, hungerTime = 3.0f;
     
     void Awake() {
         if(Instance == null){
@@ -26,17 +26,30 @@ public class GameManager : MonoBehaviour
     
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        //Selecciona la comida que va a aparecer
         StartCoroutine(SpawnFood());
+        //Mide el nivel de hambre
+        StartCoroutine(Hunger());
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //Condición para terminar el juego por peso
+        /*if(weightPoints == 0)
+        {
+            //Se acaba el juego por bajo peso
+        }
+        else if(weightPoints == 100)
+        {
+            //Se acaba el juego por mucho peso
+        }*/
     }
 
-    //Alimento que debe aparecer
+    //Alimento que debe aparecer en la escena
     private IEnumerator SpawnFood(){
         while(true)
         {
@@ -46,15 +59,29 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //Corutina para el hambre
+    private IEnumerator Hunger(){
+
+        while(true){
+        yield return new WaitForSeconds(hungerTime);
+        weightPoints = weightPoints - 1;
+        }
+
+    }
+
+    //Calcula la cantidad de alimentación sana
     public void PlusHealthPoints(float healthPointsPlus)
     {
         healthPoints += healthPointsPlus*2;
-        totalPoints = totalPoints + healthPointsPlus;
+        weightPoints = weightPoints + healthPoints;
+        healthPoints = 0;
     }
 
+    //Calcula la cantidad de alimentación chatarra
     public void PlusBadPoints(float badPointsPlus)
     {
         badPoints += badPointsPlus*4;
-        totalPoints = totalPoints + badPointsPlus;
+        weightPoints = weightPoints - badPoints;
+        badPoints = 0;
     }
 }

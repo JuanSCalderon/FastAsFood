@@ -5,10 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance {get; private set;}
-    public int HealthPoints {get {return healthPoints;}}
-    public int BadPoints {get {return badPoints;}}
-    public int healthPoints, badPoints;
-    public int totalPoints = 0;
+    public float HealthPoints {get {return healthPoints=0;}}
+    public float BadPoints {get {return badPoints=0;}}
+    public float healthPoints = 0, badPoints = 0;
+    public float totalPoints = 0;
     
     public List<GameObject> food; 
     private float spawnTime = 2.0f;
@@ -46,15 +46,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void PlusHealthPoints(int healthPointsPlus)
+    public void PlusHealthPoints(float healthPointsPlus)
     {
-        healthPoints += healthPointsPlus;
+        healthPoints += healthPointsPlus*2;
         totalPoints = totalPoints + healthPointsPlus;
     }
 
-    public void PlusBadPoints(int badPointsPlus)
+    public void PlusBadPoints(float badPointsPlus)
     {
-        badPoints += badPointsPlus;
+        badPoints += badPointsPlus*4;
         totalPoints = totalPoints + badPointsPlus;
     }
 }

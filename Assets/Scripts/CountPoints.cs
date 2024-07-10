@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CountPoints : MonoBehaviour
 {
-    public int valor = 1;
+    public float valor = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +25,7 @@ public class CountPoints : MonoBehaviour
             Destroy(food.gameObject);
         }
         else if(food.gameObject.CompareTag("BadFood")){
-            
+
             GameManager.Instance.PlusBadPoints(valor);
             Destroy(food.gameObject);
         }

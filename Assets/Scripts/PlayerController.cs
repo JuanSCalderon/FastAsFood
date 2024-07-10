@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRigibody;
     float movX, movZ;
-    public float degrees, speed;
+    public float degrees; 
+    public float speed = 10, weight = 50, speedWeight=0;
     Vector3 move; 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +25,10 @@ public class PlayerController : MonoBehaviour
         movZ = Input.GetAxis("Vertical");
 
         move = transform.forward * movZ;
-        
     }
 
     private void FixedUpdate() {
-        
+        weight = GameManager.Instance.healthPoints; 
         if(movX != 0 || movZ != 0)
         {
         //Traslación del personaje en el campo de juego

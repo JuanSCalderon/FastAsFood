@@ -30,11 +30,11 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() {
         if(GameManager.Instance.weightPoints >= 0 && GameManager.Instance.weightPoints < 25)
         {
-            speedWeight = 0.3f;
+            speedWeight = 2.0f;
         }
         if(GameManager.Instance.weightPoints >= 25 && GameManager.Instance.weightPoints < 40)
         {
-            speedWeight = 0.5f;
+            speedWeight = 1.5f;
         }
         if(GameManager.Instance.weightPoints >= 40 && GameManager.Instance.weightPoints < 60)
         {
@@ -42,11 +42,11 @@ public class PlayerController : MonoBehaviour
         }
         if(GameManager.Instance.weightPoints >= 60 && GameManager.Instance.weightPoints < 75)
         {
-            speedWeight = 1.5f;
+            speedWeight = 0.5f;
         }
         if(GameManager.Instance.weightPoints >= 75 && GameManager.Instance.weightPoints < 100)
         {
-            speedWeight = 2.0f;
+            speedWeight = 0.3f;
         }
 
         if(movX != 0 || movZ != 0)

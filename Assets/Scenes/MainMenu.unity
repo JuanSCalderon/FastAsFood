@@ -182,7 +182,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'movimiento: WASD O Flechas'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 28eb827473d1ee741b285fdcbf331bb9, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &127186797
@@ -702,8 +702,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 28eb827473d1ee741b285fdcbf331bb9, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 28eb827473d1ee741b285fdcbf331bb9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1200,8 +1200,8 @@ MonoBehaviour:
 
     AS FOOD'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 28eb827473d1ee741b285fdcbf331bb9, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 28eb827473d1ee741b285fdcbf331bb9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1831,18 +1831,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: cee513e9f94b2416c84136d80d435c78, type: 3}
     volume: 1
     pitch: 1
-    volume: 1
-    pitch: 1
   - name: GameOver
     clip: {fileID: 8300000, guid: 3e408a92efbfc4f609fcc4a6881e1fda, type: 3}
     volume: 1
     pitch: 1
-    volume: 1
-    pitch: 1
   - name: MainMenuMusic
     clip: {fileID: 8300000, guid: 41fb1e2d81e8c4a598c0f5fbfa615b76, type: 3}
-    volume: 1
-    pitch: 1
     volume: 1
     pitch: 1
   sFxSounds:
@@ -1850,24 +1844,16 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 20b482ce86cdb4e23bc27c7d58487b55, type: 3}
     volume: 1
     pitch: 1
-    volume: 1
-    pitch: 1
   - name: Crunch
     clip: {fileID: 8300000, guid: 49399d66ff4f646059b99972f22afc72, type: 3}
-    volume: 1
-    pitch: 1
     volume: 1
     pitch: 1
   - name: StartButton
     clip: {fileID: 8300000, guid: cb12c83f75e5d423db99c90806153e37, type: 3}
     volume: 1
     pitch: 1
-    volume: 1
-    pitch: 1
   - name: ReStartButton
     clip: {fileID: 8300000, guid: c29dd12d424d84f1580bc7759f9af2df, type: 3}
-    volume: 1
-    pitch: 1
     volume: 1
     pitch: 1
   musicSource: {fileID: 1753530054}
@@ -2163,8 +2149,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Controls \U0001F643\U0001F643\U0001F643"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 28eb827473d1ee741b285fdcbf331bb9, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 28eb827473d1ee741b285fdcbf331bb9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2298,8 +2284,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PLAY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2695,7 +2681,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Juan Sebasti\xE1n Calder\xF3n\t\nKarol Galindo\nH\xE9ctor Rojas"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 28eb827473d1ee741b285fdcbf331bb9, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2759,7 +2745,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1978332990
@@ -2830,8 +2816,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2850,7 +2836,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2

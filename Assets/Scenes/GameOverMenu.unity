@@ -660,8 +660,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: START AGAIN
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 28eb827473d1ee741b285fdcbf331bb9, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 28eb827473d1ee741b285fdcbf331bb9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -795,8 +795,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You       DIED
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: a8c1fad6b3e7d46fc852598d33ba70b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 28eb827473d1ee741b285fdcbf331bb9, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 28eb827473d1ee741b285fdcbf331bb9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
